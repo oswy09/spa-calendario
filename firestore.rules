@@ -1,0 +1,11 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Permitir lectura y escritura en bookings para cualquiera
+    // En producción deberías agregar más seguridad
+    match /bookings/{booking} {
+      allow read, write: if true;
+    }
+  }
+}
