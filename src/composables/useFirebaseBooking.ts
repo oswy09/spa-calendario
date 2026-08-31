@@ -36,7 +36,7 @@ const generateGoogleCalendarLink = (bookingData: BookingData, bookingId: string)
   const endDate = new Date(startDate.getTime() + durationMinutes * 60000)
 
   const title = `${bookingData.serviceName} - ${bookingData.clientName}`
-  const description = `Reserva en Aura Studio\n\nServicio: ${bookingData.serviceName}\nDuración: ${bookingData.serviceDuration}\nPrecio: $${bookingData.servicePrice.toLocaleString('es-CO')} COP\n\nCliente:\nNombre: ${bookingData.clientName}\nEmail: ${bookingData.clientEmail}\nTeléfono: ${bookingData.clientPhone}\n\nID de reserva: ${bookingId}`
+  const description = `Reserva en Spa Studio\n\nServicio: ${bookingData.serviceName}\nDuración: ${bookingData.serviceDuration}\nPrecio: $${bookingData.servicePrice.toLocaleString('es-CO')} COP\n\nCliente:\nNombre: ${bookingData.clientName}\nEmail: ${bookingData.clientEmail}\nTeléfono: ${bookingData.clientPhone}\n\nID de reserva: ${bookingId}`
 
   // Formatear fechas para Google Calendar (ISO 8601)
   const formatDate = (date: Date) => date.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z'
@@ -46,7 +46,7 @@ const generateGoogleCalendarLink = (bookingData: BookingData, bookingId: string)
     text: title,
     dates: `${formatDate(startDate)}/${formatDate(endDate)}`,
     details: description,
-    location: 'Aura Studio - Calle 123 #45-67',
+    location: 'Spa Studio - Calle 123 #45-67',
     add: bookingData.clientEmail,
   })
 

@@ -6,7 +6,7 @@
       <div class="flex justify-between items-start mb-8">
         <div>
           <h1 class="text-4xl font-serif font-bold text-sage-900 mb-2">Panel de Administrador</h1>
-          <p class="text-sage-600">Aura Studio - Sistema de Reservas</p>
+          <p class="text-sage-600">Spa Studio - Sistema de Reservas</p>
         </div>
         <button
           @click="$emit('back')"
@@ -248,7 +248,7 @@ const addToCalendar = async (booking: Booking) => {
       text: `${booking.serviceName} - ${booking.clientName}`,
       dates: `${formatDate(startDate)}/${formatDate(endDate)}`,
       details: `Cliente: ${booking.clientName}\nEmail: ${booking.clientEmail}\nTeléfono: ${booking.clientPhone}\nPrecio: $${booking.servicePrice.toLocaleString('es-CO')} COP\nID Reserva: ${booking.id}`,
-      location: 'Aura Studio - Calle 123 #45-67',
+      location: 'Spa Studio - Calle 123 #45-67',
       add: booking.clientEmail,
     })
 

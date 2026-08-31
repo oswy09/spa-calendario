@@ -12,15 +12,13 @@
       Admin
     </button>
     
-    <div class="w-full max-w-xl bg-white rounded-[2rem] shadow-[0_12px_48px_rgb(17,16,74,0.10)] border border-sage-100 p-6 sm:p-12 relative overflow-hidden">
-      <!-- Accent bar -->
-      <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-sage-400 via-sage-500 to-sage-400 rounded-t-[2rem]"></div>
+    <!-- Brand title above card -->
+    <div class="text-center mb-8">
+      <h1 class="font-serif text-4xl sm:text-5xl tracking-[0.18em] uppercase text-sage-900">Spa Studio</h1>
+      <p class="text-xs tracking-[0.35em] text-sage-500 mt-2 uppercase">Reserva tu cita</p>
+    </div>
 
-      <!-- Header -->
-      <div class="text-center mb-10">
-        <div class="font-serif text-xl tracking-widest uppercase text-sage-500 mb-2">Aura Studio</div>
-        <h1 class="font-serif text-3xl sm:text-4xl text-sage-900 font-bold">Reserva tu cita</h1>
-      </div>
+    <div class="w-full max-w-lg bg-white rounded-3xl shadow-[0_2px_20px_rgb(17,16,74,0.07)] p-6 sm:p-10">
 
       <!-- Progress Indicator -->
       <div v-if="step < 5" class="mb-10">
@@ -36,7 +34,7 @@
           </span>
         </div>
         <div class="h-1 w-full bg-sage-100 rounded-full overflow-hidden">
-          <div 
+          <div
             class="h-full bg-sage-400 rounded-full transition-all duration-500"
             :style="{ width: `${(step / 4) * 100}%` }"
           />
@@ -67,10 +65,10 @@
               :key="category.id"
               @click="selectedCategory = category.id"
               :class="{
-                'bg-sage-900 text-white': selectedCategory === category.id,
-                'bg-sage-50 text-sage-600 hover:bg-sage-100': selectedCategory !== category.id
+                'bg-sage-500 text-white': selectedCategory === category.id,
+                'text-sage-600 hover:text-sage-900': selectedCategory !== category.id
               }"
-              class="px-5 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-colors"
+              class="px-4 py-1.5 rounded-full text-sm font-medium whitespace-nowrap transition-colors"
             >
               {{ category.name }}
             </button>
@@ -167,7 +165,7 @@
             </div>
             <div>
               <h2 class="font-serif text-2xl sm:text-3xl font-bold">Elige una hora</h2>
-              <p class="text-sm text-sage-700 mt-1 capitalize">
+              <p class="text-sm text-sage-600 mt-1 capitalize">
                 {{ selectedDate?.toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' }) }}
               </p>
             </div>
@@ -297,7 +295,7 @@
       </div>
 
       <!-- Navigation Buttons -->
-      <div v-if="step < 5" class="mt-8 flex items-center justify-between pt-6 border-t border-sage-100">
+      <div v-if="step < 5" class="mt-8 flex items-center justify-between pt-5 border-t border-sage-100/70">
         <button
           v-if="step > 1"
           @click="prevStep"

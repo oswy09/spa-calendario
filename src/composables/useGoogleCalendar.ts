@@ -107,8 +107,8 @@ export function useGoogleCalendar() {
 
     const event = {
       summary: `${booking.serviceName} - ${booking.clientName}`,
-      location: 'Aura Studio - Calle 123 #45-67',
-      description: `Reserva en Aura Studio
+      location: 'Spa Studio - Calle 123 #45-67',
+      description: `Reserva en Spa Studio
       
 Servicio: ${booking.serviceName}
 Duración: ${booking.duration}
