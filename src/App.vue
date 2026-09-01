@@ -329,7 +329,7 @@
         <div class="h-px w-12 bg-sage-200"></div>
       </div>
       <a
-        href="https://oswal.com.co/"
+        href="https://oswalstudio.com/"
         target="_blank"
         rel="noopener noreferrer"
         class="text-xs text-sage-500 hover:text-sage-700 transition-colors tracking-wide"
